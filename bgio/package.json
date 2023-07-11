@@ -14,12 +14,11 @@
     "@pixi/ui": "^0.7.4",
     "boardgame.io": "^0.50.2",
     "esm": "^3.2.25",
-    "fabricjs": "^1.0.0",
-    "parcel": "^2.9.2",
-    "pixi.js": "^7.2.4",
-    "pixijs": "^7.1.4"
+    "fabric": "^5.3.0",
+    "parcel": "^2.9.3",
+    "pixi.js": "^7.2.4"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "parcel": "^2.9.3"
   }
 }
