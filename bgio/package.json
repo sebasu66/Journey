@@ -1,0 +1,25 @@
+{
+  "name": "bgio-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node -r esm src/server.js",
+    "start": "parcel index.html --port 3000 --host 127.0.0.1 --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pixi/ui": "^0.7.4",
+    "boardgame.io": "^0.50.2",
+    "esm": "^3.2.25",
+    "fabricjs": "^1.0.0",
+    "parcel": "^2.9.2",
+    "pixi.js": "^7.2.4",
+    "pixijs": "^7.1.4"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
