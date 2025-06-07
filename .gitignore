@@ -1,3 +1,5 @@
 bgio/node_modules/
 bgio/cache/
 bgio/.parcel-cache/
+server/node_modules/
+server/package-lock.json
