@@ -1,12 +1,29 @@
 import express from 'express';
 import { WebSocketServer } from 'ws';
+import fs from 'fs';
+import swaggerUi from 'swagger-ui-express';
+import swaggerSpec from './swagger.js';
+
+const randomActs = JSON.parse(fs.readFileSync(new URL('./data/randomActs.json', import.meta.url)));
+const timeCycles = JSON.parse(fs.readFileSync(new URL('./data/timeCycles.json', import.meta.url)));
 
 const app = express();
 app.use(express.json());
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 let extensionSocket = null;
 const pending = new Map();
 let nextId = 1;
+
+app.get('/api/random-act', (req, res) => {
+  const result = randomActs[Math.floor(Math.random() * randomActs.length)];
+  res.json({ result });
+});
+
+app.get('/api/time-cycle', (req, res) => {
+  const result = timeCycles[Math.floor(Math.random() * timeCycles.length)];
+  res.json({ result });
+});
 
 app.post('/ask', (req, res) => {
   const query = req.body.query;
@@ -51,3 +68,5 @@ server.on('upgrade', (request, socket, head) => {
     });
   });
 });
+
+export default server;
