@@ -1,5 +1,5 @@
 import random
-from .tile import Tile
+from tile import Tile
 
 class MapGenerator:
     def __init__(self, width, height, floor_tile=None, wall_tile=None):

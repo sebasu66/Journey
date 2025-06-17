@@ -1,7 +1,7 @@
-from .tile import Tile
-from .map_generator import MapGenerator
-from .map_renderer import MapRenderer
-from .foundry_data_extractor import FoundryDataExtractor
+from tile import Tile
+from map_generator import MapGenerator
+from map_renderer import MapRenderer
+from foundry_data_extractor import FoundryDataExtractor
 import json
 
 
