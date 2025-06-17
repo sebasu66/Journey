@@ -3,3 +3,8 @@ bgio/cache/
 bgio/.parcel-cache/
 server/node_modules/
 server/package-lock.json
+
+# Map generator outputs
+foundry_scene_data.json
+generated_*.png
+__pycache__/
