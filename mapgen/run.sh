@@ -1,7 +1,13 @@
 #!/bin/bash
 
 # Get the directory where the script is located
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+SCRIPT_DIR_RELATIVE=$(dirname "$0")
+SCRIPT_DIR=$(cd "$SCRIPT_DIR_RELATIVE" && pwd)
+
+# Print SCRIPT_DIR for debugging
+echo "SCRIPT_DIR is: ${SCRIPT_DIR}"
+echo "Contents of SCRIPT_DIR:"
+ls "${SCRIPT_DIR}"
 
 # Install dependencies
 echo "Installing dependencies..."
